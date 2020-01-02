@@ -1,0 +1,89 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(to right, #6a3093, #a044ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: #495057;
+}
+.formContainer {
+  background-color: rgba(0, 0, 0, 0);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 0 none;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  width: 80%;
+  margin: 0 10%;
+  /*stacking fieldsets above each other*/
+  position: relative;
+  justify-content: center;
+}
+.form .input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.form .heading {
+  display: flex;
+  flex-direction: column;
+}
+.form .heading h2,
+.form .heading h3 {
+  align-self: center;
+  font-weight: normal;
+  margin: 10px 0px;
+}
+.form .signUp {
+  display: flex;
+}
+.form .signUp h4 {
+  font-weight: normal;
+}
+.form .signUp a {
+  color: #3f6ad8;
+  font-size: 12.8px;
+}
+.form .btnLink {
+  display: flex;
+  justify-content: flex-end;
+}
+.form .btnLink a {
+  font-size: 12.8;
+  padding-right: 5px;
+  color: #3f6ad8;
+}
+.form .btnLink button {
+  background: #3f6ad8;
+  font-size: 12.8px;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 8px 16px ;
+  border: 1px;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+}
+img {
+  width: 120px;
+  align-self: center;
+}
+.copyright {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
