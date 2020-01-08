@@ -1,0 +1,111 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  font-family: "apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: #495057;
+}
+.leftContainer {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+}
+.leftContainer .logo {
+  display: flex;
+  justify-content: center;
+}
+.leftContainer img {
+  width: 150px;
+  align-self: center;
+}
+.leftContainer form {
+  display: flex;
+  flex-wrap: wrap;
+}
+.leftContainer .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: white;
+  border: 0 none;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  width: 80%;
+  margin: 0 10%;
+  /*stacking fieldsets above each other*/
+  position: relative;
+}
+.leftContainer .form .labelInput {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin-left: 10px;
+}
+.leftContainer .form .input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.leftContainer .form .heading {
+  display: flex;
+  flex-direction: column;
+}
+.leftContainer .form .heading h2,
+.leftContainer .form .heading h3 {
+  font-weight: normal;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.leftContainer .form .btnLink {
+  display: flex;
+  justify-content: center;
+}
+.leftContainer .form .btnLink button {
+  background: #3f6ad8;
+  font-size: 12.8px;
+  color: white;
+  border-radius: 15px;
+  cursor: pointer;
+  padding: 8px 16px ;
+  border: 1px;
+}
+.leftContainer .form .checkBox {
+  display: flex;
+}
+.leftContainer .form hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+.leftContainer .form h1 {
+  margin: -9px;
+  padding: 0px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+.leftContainer .form .vertical {
+  width: 2px;
+  height: 15px;
+}
+.leftContainer .form .copyright {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+.rightContainer {
+  flex: 1;
+  background: linear-gradient(to right, #6a3093, #a044ff);
+}
