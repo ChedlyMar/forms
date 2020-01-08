@@ -14,11 +14,11 @@ let logo = document.getElementsByClassName("logo")[0];
     if(x==0){x=1}
     else{x=0};
 });
-//The hamburger action
 
 
 
-// Dropdown Menu
+
+// Dropdown side Menu
 var bb = document.getElementsByClassName("link");
 var dd= document.getElementsByClassName("submenu");
 for(let i=0;i< bb.length; i++){        
@@ -37,6 +37,19 @@ for(let i=0;i< bb.length; i++){
     
           
 });}
+
+//navigation dropdown menu 
+let megaMenu=document.getElementById("megamenu");
+megaMenu.addEventListener("click",()=>{
+    document.getElementsByTagName("mega-menu")[0].classList.toggle("show");    
+});
+
+let setting=document.getElementById("setting");
+setting.addEventListener("click",()=>{
+    document.getElementsByClassName("settingModel")[0].classList.toggle("showSetting");    
+});
+
+
 
 //Search btn
 var searchContainer=document.getElementsByClassName("thirteen")[0];

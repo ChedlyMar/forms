@@ -1,4 +1,5 @@
 body {
+  height: 100%;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 0.88rem;
@@ -228,17 +229,19 @@ a {
 .submenu li {
   border-bottom: 1px solid #4b4a5e;
 }
-.submenu a {
+.submenu a,
+.modalLink {
   display: block;
   text-decoration: none;
   color: #343a40;
   padding: 12px;
-  padding-left: 28px;
+  padding-left: 18px;
   -webkit-transition: all 0.25s ease;
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
-.submenu a:hover {
+.submenu a:hover,
+.modalLink:hover {
   background: hsla(230, 84%, 63%, 0.5);
   color: #0056b3;
 }
@@ -291,4 +294,115 @@ input[type="submit"] {
 }
 input[type="submit"]:hover {
   opacity: 0.8;
+}
+/**
+ * Mega Menu
+ -----------------------------*/
+mega-menu {
+  position: absolute;
+  top: 65px;
+  left: 235px;
+  display: none;
+  background: #FFF;
+}
+mega-menu .modalContainer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 16px 16px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  border-radius: 8px;
+}
+mega-menu .modalContainer .verticalLine {
+  border-left: solid #4D4D4D;
+  border-width: 1px;
+}
+mega-menu .modalContainer .mega1,
+mega-menu .modalContainer .mega2,
+mega-menu .modalContainer .mega3 {
+  flex: 1;
+  min-width: 270px;
+  max-width: 320px;
+  height: auto;
+}
+mega-menu .modalContainer .mega1 li,
+mega-menu .modalContainer .mega2 li,
+mega-menu .modalContainer .mega3 li {
+  padding: 8px 16px;
+}
+mega-menu .modalContainer .mega1 li a,
+mega-menu .modalContainer .mega2 li a,
+mega-menu .modalContainer .mega3 li a {
+  color: #3f6ad8;
+}
+mega-menu .modalContainer .mega1 li a:hover,
+mega-menu .modalContainer .mega2 li a:hover,
+mega-menu .modalContainer .mega3 li a:hover {
+  color: #4D4D4D;
+}
+mega-menu.show {
+  display: block;
+}
+/**
+ * Setting
+ -----------------------------*/
+.settingModel {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  width: 240px;
+  top: 65px;
+  left: 470px;
+  border-radius: 5px;
+  position: absolute;
+  display: none;
+}
+.settingModel.showSetting {
+  display: block;
+}
+.settingModel .set1 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  width: 100%;
+  height: 96px;
+  background-image: url('https://raw.githubusercontent.com/DashboardPack/architectui-vue-theme-free/master/src/assets/images/dropdown-header/abstract2.jpg');
+}
+.settingModel h5 {
+  font-weight: 500;
+  font-size: 1.25rem;
+  align-self: center;
+  margin: 0px;
+}
+.settingModel h6 {
+  font-size: 1rem;
+  margin: 0px;
+  align-self: center;
+  margin-top: 5px;
+}
+.settingModel .set2 {
+  width: 100%;
+  display: flex;
+}
+.settingModel .set3 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 70px;
+  justify-content: center;
+}
+.settingModel .cancelBtn {
+  width: 80px;
+  height: 20px;
+  background-color: ;
+  padding: 4px 16px;
+  border: 1px;
+  color: #fff;
+  background-color: #b81f44;
+  border-color: #ad1e40;
+  align-self: flex-end;
+  box-shadow: 0 0.125rem 0.625rem rgba(217, 37, 80, 0.5), 0 0.0625rem 0.125rem rgba(217, 37, 80, 0.6);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  border-radius: 0.2rem;
 }

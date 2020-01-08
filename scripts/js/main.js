@@ -19,8 +19,7 @@ d.addEventListener("click", function () {
     }
     ;
 });
-//The hamburger action
-// Dropdown Menu
+// Dropdown side Menu
 var bb = document.getElementsByClassName("link");
 var dd = document.getElementsByClassName("submenu");
 var _loop_1 = function (i) {
@@ -39,6 +38,15 @@ var _loop_1 = function (i) {
 for (var i = 0; i < bb.length; i++) {
     _loop_1(i);
 }
+//navigation dropdown menu 
+var megaMenu = document.getElementById("megamenu");
+megaMenu.addEventListener("click", function () {
+    document.getElementsByTagName("mega-menu")[0].classList.toggle("show");
+});
+var setting = document.getElementById("setting");
+setting.addEventListener("click", function () {
+    document.getElementsByClassName("settingModel")[0].classList.toggle("showSetting");
+});
 //Search btn
 var searchContainer = document.getElementsByClassName("thirteen")[0];
 var searchBtn = document.getElementsByClassName("btn-search")[0];
