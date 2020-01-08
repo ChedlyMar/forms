@@ -1,0 +1,169 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background: linear-gradient(to right, #6a3093, #a044ff);
+  display: flex;
+  align-items: center;
+  font-family: "apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: #495057;
+}
+.leftContainer {
+  flex: 1;
+  display: flex;
+  height: 100%;
+  /*.imageSlider{
+        position : relative;
+        display : block;
+        overflow : hidden;
+        //width : 100%;
+        //max-width : 100vw;
+        //height : 100vh;
+        //max-height : 100%;
+        height: 400px;
+        width: 300px;
+        margin : 0 auto;
+    }
+    .slider {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        z-index: 0;
+        transition: transform 1600ms;
+        transform: scale(1);
+
+
+    }}*/
+}
+.leftContainer #slider {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto 0 auto;
+  border-radius: 4px;
+}
+.leftContainer #slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  list-style: none;
+}
+.leftContainer #slider ul li {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 500px;
+  height: 300px;
+  background: #ccc;
+  text-align: center;
+  line-height: 300px;
+}
+.leftContainer a.control_prev,
+.leftContainer a.control_next {
+  position: absolute;
+  top: 40%;
+  z-index: 999;
+  display: block;
+  padding: 4% 3%;
+  width: auto;
+  height: auto;
+  background: #2a2a2a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.leftContainer a.control_prev:hover,
+.leftContainer a.control_next:hover {
+  opacity: 1;
+}
+.leftContainer a.control_prev {
+  border-radius: 0 2px 2px 0;
+}
+.leftContainer a.control_next {
+  right: 0;
+  border-radius: 2px 0 0 2px;
+}
+.leftContainer .slider_option {
+  position: relative;
+  margin: 10px auto;
+  width: 160px;
+  font-size: 18px;
+}
+.rightContainer {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-content: center;
+  background-color: #fff;
+}
+.rightContainer form {
+  align-self: center;
+  padding: 15px;
+  flex: 2;
+  padding: 80px;
+}
+.rightContainer hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+.rightContainer .inputBlock {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.rightContainer .labelInput {
+  display: flex;
+  flex-direction: column;
+}
+.rightContainer input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.rightContainer .checkLabel {
+  display: flex;
+}
+.rightContainer .buttonLink {
+  display: flex;
+  justify-content: flex-end;
+}
+.rightContainer .buttonLink a {
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 8px 16px ;
+  border: 1px;
+}
+.rightContainer .buttonLink button {
+  background: #3f6ad8;
+  font-weight: bold;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 8px 16px ;
+  border: 1px;
+}
