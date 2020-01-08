@@ -14,6 +14,7 @@ body {
     background: #e2e1e0;
 }
 
+
 nav{
 	display: flex;
 	justify-content: space-between;
@@ -92,12 +93,13 @@ nav{
 }
 
 .logohamburger{
-	width: 232px;
+	
 	padding: 24px;
 	display: flex;
-	margin: 0px 24px;
+	margin-right:  24px;
 	justify-content: space-between;
 	align-items: center;
+	
 }
 
 
@@ -111,7 +113,8 @@ nav{
 	//margin: auto;
 	width: @bar-width;
 	height: @bar-height + @bar-spacing*2;
-    cursor: pointer;
+	cursor: pointer;
+	
 }
 
 .hamburger-menu,
@@ -128,7 +131,7 @@ nav{
 	transition: all 0ms 300ms;
   
  &.animate {
-    background: rgba(255, 255, 255, 0); 
+	background: rgba(255, 255, 255, 0); 
   }
 }
 
@@ -162,7 +165,9 @@ nav{
 	transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
 }
 
-
+section{
+	display: flex;
+}
 //side menu bar
 ul { list-style-type: none; }
 
@@ -172,14 +177,38 @@ a {
 }
 
 .sidemenubar{
+	width: 230px;
 	left: 0px;
+	box-shadow: 10px 10px 6px -6px rgba(0, 0, 0, 0.8) ;
+	
+	
 }
+@keyframes example {
+	from {}
+	to {
+		width: 50px;
+		ul{
+			display: none;
+		}
+	}
+  }
+
 .sidemenubar.animate{
-	display: none;
+	
+	hide{
+		display: none;
+	}
+	
+	animation-name: example;
+	  
+	  animation-timing-function: ease-in;
+	  animation-fill-mode: forwards;
 }
+
+
 .accordion {
 	width: 100%;
-	max-width: 360px;
+	max-width: 230px;
 	//margin: 30px auto 20px;
 	background: #FFF;
 	//-webkit-border-radius: 4px;
@@ -189,7 +218,7 @@ a {
  .menuHeading{
 	text-transform: uppercase;
     font-size: .8rem;
-    margin: .75rem 0;
+    //margin-bottom: .75rem ;
     font-weight: bold;
     color: #3f6ad8;
     white-space: nowrap;
@@ -206,6 +235,7 @@ a {
 	font-weight: 700;
 	border-bottom: 1px solid #CCC;
 	position: relative;
+	height: 21px;
 	//-webkit-transition: all 0.4s ease;
 	//-o-transition: all 0.4s ease;
 	transition: all 0.4s ease;
@@ -222,6 +252,7 @@ a {
 	//-webkit-transition: all 0.4s ease;
 	//-o-transition: all 0.4s ease;
 	transition: all 1s ease;
+	margin: inherit;
   }
   
   .accordion li i.fa-chevron-down {
@@ -255,12 +286,9 @@ a {
  }
 .openSubMenu{
 		display: block;
+		padding-left: 15px;
 	}
 
-
-
-
-  
   .submenu li { border-bottom: 1px solid #4b4a5e; }
   
   .submenu a {
@@ -268,7 +296,7 @@ a {
 	text-decoration: none;
 	color: #343a40;
 	padding: 12px;
-	padding-left: 42px;
+	padding-left: 28px;
 	-webkit-transition: all 0.25s ease;
 	-o-transition: all 0.25s ease;
 	transition: all 0.25s ease;
@@ -278,3 +306,76 @@ a {
 	background:  hsla(230,84%,63%,0.5);
 	color: #0056b3;
   }
+
+
+//search box
+
+
+body {
+	background: #DDD;
+	font-size: 15px;
+}
+#wrap {
+  display: flex;
+  position: relative;
+  height: 60px;
+  padding: 0px;
+  
+}
+
+input[type="text"] {
+  height: 40px;
+  font-size: 55px;
+  //display: inline-block;
+  font-family: "Lato";
+  font-weight: 100;
+  border: none;
+  outline: none;
+  color: #555;
+  //padding: 3px;
+  padding-left: 60px;
+  width: 0px;
+  position: absolute;
+  //top: 0;
+  //right: 0;
+  background: none;
+  z-index: 3;
+  transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+  cursor: pointer;
+}
+
+input[type="text"]:focus:hover {
+  border-bottom: 1px solid #BBB;
+}
+
+input[type="text"]:focus {
+  width: 300px;
+  z-index: 1;
+  border-bottom: 1px solid #BBB;
+  cursor: text;
+}
+input[type="submit"] {
+  height: 60px;
+  width: 60px;
+  //display: inline-block;
+  color:red;
+  
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADNQTFRFU1NT9fX1lJSUXl5e1dXVfn5+c3Nz6urqv7+/tLS0iYmJqampn5+fysrK39/faWlp////Vi4ZywAAABF0Uk5T/////////////////////wAlrZliAAABLklEQVR42rSWWRbDIAhFHeOUtN3/ags1zaA4cHrKZ8JFRHwoXkwTvwGP1Qo0bYObAPwiLmbNAHBWFBZlD9j0JxflDViIObNHG/Do8PRHTJk0TezAhv7qloK0JJEBh+F8+U/hopIELOWfiZUCDOZD1RADOQKA75oq4cvVkcT+OdHnqqpQCITWAjnWVgGQUWz12lJuGwGoaWgBKzRVBcCypgUkOAoWgBX/L0CmxN40u6xwcIJ1cOzWYDffp3axsQOyvdkXiH9FKRFwPRHYZUaXMgPLeiW7QhbDRciyLXJaKheCuLbiVoqx1DVRyH26yb0hsuoOFEPsoz+BVE0MRlZNjGZcRQyHYkmMp2hBTIzdkzCTc/pLqOnBrk7/yZdAOq/q5NPBH1f7x7fGP4C3AAMAQrhzX9zhcGsAAAAASUVORK5CYII=) center center no-repeat;
+  text-indent: -10000px;
+  border: none;
+  //position: absolute;
+  //top: 0;
+  //right: 0;
+  z-index: 2;
+  cursor: pointer;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity .4s ease;
+}
+
+input[type="submit"]:hover {
+  opacity: 0.8;
+}
+
+
+

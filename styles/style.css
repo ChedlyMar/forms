@@ -76,10 +76,9 @@ nav .userxsicon {
   margin-left: -7px;
 }
 .logohamburger {
-  width: 232px;
   padding: 24px;
   display: flex;
-  margin: 0px 24px;
+  margin-right: 24px;
   justify-content: space-between;
   align-items: center;
 }
@@ -129,6 +128,9 @@ nav .userxsicon {
   transform: rotate(-45deg);
   transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
 }
+section {
+  display: flex;
+}
 ul {
   list-style-type: none;
 }
@@ -137,21 +139,35 @@ a {
   text-decoration: none;
 }
 .sidemenubar {
+  width: 230px;
   left: 0px;
+  box-shadow: 10px 10px 6px -6px rgba(0, 0, 0, 0.8);
+}
+@keyframes example {
+  to {
+    width: 50px;
+  }
+  to ul {
+    display: none;
+  }
 }
 .sidemenubar.animate {
+  animation-name: example;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+.sidemenubar.animate hide {
   display: none;
 }
 .accordion {
   width: 100%;
-  max-width: 360px;
+  max-width: 230px;
   background: #FFF;
   border-radius: 4px;
 }
 .menuHeading {
   text-transform: uppercase;
   font-size: 0.8rem;
-  margin: 0.75rem 0;
   font-weight: bold;
   color: #3f6ad8;
   white-space: nowrap;
@@ -166,6 +182,7 @@ a {
   font-weight: 700;
   border-bottom: 1px solid #CCC;
   position: relative;
+  height: 21px;
   transition: all 0.4s ease;
 }
 .accordion li:last-child .link {
@@ -178,6 +195,7 @@ a {
   font-size: 18px;
   color: #595959;
   transition: all 1s ease;
+  margin: inherit;
 }
 .accordion li i.fa-chevron-down {
   right: 12px;
@@ -205,6 +223,7 @@ a {
 }
 .openSubMenu {
   display: block;
+  padding-left: 15px;
 }
 .submenu li {
   border-bottom: 1px solid #4b4a5e;
@@ -214,7 +233,7 @@ a {
   text-decoration: none;
   color: #343a40;
   padding: 12px;
-  padding-left: 42px;
+  padding-left: 28px;
   -webkit-transition: all 0.25s ease;
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
@@ -222,4 +241,54 @@ a {
 .submenu a:hover {
   background: hsla(230, 84%, 63%, 0.5);
   color: #0056b3;
+}
+body {
+  background: #DDD;
+  font-size: 15px;
+}
+#wrap {
+  display: flex;
+  position: relative;
+  height: 60px;
+  padding: 0px;
+}
+input[type="text"] {
+  height: 40px;
+  font-size: 55px;
+  font-family: "Lato";
+  font-weight: 100;
+  border: none;
+  outline: none;
+  color: #555;
+  padding-left: 60px;
+  width: 0px;
+  position: absolute;
+  background: none;
+  z-index: 3;
+  transition: width 0.4s cubic-bezier(0, 0.795, 0, 1);
+  cursor: pointer;
+}
+input[type="text"]:focus:hover {
+  border-bottom: 1px solid #BBB;
+}
+input[type="text"]:focus {
+  width: 300px;
+  z-index: 1;
+  border-bottom: 1px solid #BBB;
+  cursor: text;
+}
+input[type="submit"] {
+  height: 60px;
+  width: 60px;
+  color: red;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADNQTFRFU1NT9fX1lJSUXl5e1dXVfn5+c3Nz6urqv7+/tLS0iYmJqampn5+fysrK39/faWlp////Vi4ZywAAABF0Uk5T/////////////////////wAlrZliAAABLklEQVR42rSWWRbDIAhFHeOUtN3/ags1zaA4cHrKZ8JFRHwoXkwTvwGP1Qo0bYObAPwiLmbNAHBWFBZlD9j0JxflDViIObNHG/Do8PRHTJk0TezAhv7qloK0JJEBh+F8+U/hopIELOWfiZUCDOZD1RADOQKA75oq4cvVkcT+OdHnqqpQCITWAjnWVgGQUWz12lJuGwGoaWgBKzRVBcCypgUkOAoWgBX/L0CmxN40u6xwcIJ1cOzWYDffp3axsQOyvdkXiH9FKRFwPRHYZUaXMgPLeiW7QhbDRciyLXJaKheCuLbiVoqx1DVRyH26yb0hsuoOFEPsoz+BVE0MRlZNjGZcRQyHYkmMp2hBTIzdkzCTc/pLqOnBrk7/yZdAOq/q5NPBH1f7x7fGP4C3AAMAQrhzX9zhcGsAAAAASUVORK5CYII=) center center no-repeat;
+  text-indent: -10000px;
+  border: none;
+  z-index: 2;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity 0.4s ease;
+}
+input[type="submit"]:hover {
+  opacity: 0.8;
 }

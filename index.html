@@ -20,7 +20,18 @@
                     <div class="menu-wrapper">
                         <div class="hamburger-menu"></div>	  
                     </div>
+                    <div id="wrap">
+                        <form action="" autocomplete="on">
+                          <input id="search" name="search" type="text" placeholder="What're we looking for ?">     
+                          <input id="search_submit" value="Rechercher" type="submit">
+                        </form>
+                      </div>
+                    
                 </div>
+
+                
+                  
+
                 <div class="dropdowncont">
                     <div class="dropdown" id="megamenu">
                       <img class="sicon" src="https://img.icons8.com/nolan/96/000000/gift.png">
@@ -54,12 +65,15 @@
             </div>
         </nav>
     </header>
-    <section>
-        <div class="sidemenubar">
+    
+        <div id="l" class="sidemenubar">
             <ul id="accordion" class="accordion">
                 <li class="menuHeading">MENU</li>
                 <li>
-                    <div class="link">Dashboard</div>
+                    <div class="link">
+                        <i class="fas fa-rocket"></i>
+                        <hide>Dashboard</hide>
+                    </div>
                     <ul class="submenu">
                         <li><a href="">Analitics</a></li>
                         <li><a href="">Commerce</a></li>
@@ -70,18 +84,18 @@
                     </ul>
                 </li>
                 <li>
-                    <div class="link">Page</div>
+                    <div class="link"><i class="fas fa-file-alt"></i> <hide>Page</hide></div>
                     <ul class="submenu">
-                        <li><a href="">Login</a></li>
-                        <li><a href="">Login Boxed</a></li>
-                        <li><a href="">Registred</a></li>
-                        <li><a href="">Registred Boxed</a></li>
-                        <li><a href="">Password</a></li>
-                        <li><a href="">Password Boxed</a></li>
+                        <li><a href="pages\login.html">Login</a></li>
+                        <li><a href="pages\login-boxed.html">Login Boxed</a></li>
+                        <li><a href="pages\register.html">Registred</a></li>
+                        <li><a href="pages\register-boxed.html">Registred Boxed</a></li>
+                        <li><a href="pages\password.html">Password</a></li>
+                        <li><a href="pages\password-boxed.html">Password Boxed</a></li>
                     </ul>
                 </li>
                 <li>
-                    <div class="link">Application</div>
+                    <div class="link"><i class="fas fa-crop-alt"></i><hide>Application</hide></div>
                     <ul class="submenu">
                         <li><a href="">Analitics</a></li>
                         <li><a href="">Commerce</a></li>
@@ -95,8 +109,9 @@
 
 
         </div>
-    </section>
+    
     <footer>
+        
 
     </footer>
 

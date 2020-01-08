@@ -1,4 +1,5 @@
 "use strict";
+var x = 1;
 //The hamburger animation
 var d = document.getElementsByClassName("menu-wrapper")[0];
 var b = document.getElementsByClassName("hamburger-menu")[0];
@@ -8,6 +9,15 @@ d.addEventListener("click", function () {
     b.classList.toggle("animate");
     sideMenu.classList.toggle("animate");
     logo.classList.toggle("animate");
+    for (var j = 0; j < bb.length; j++)
+        dd[j].classList.remove("openSubMenu");
+    if (x == 0) {
+        x = 1;
+    }
+    else {
+        x = 0;
+    }
+    ;
 });
 //The hamburger action
 // Dropdown Menu
@@ -15,6 +25,12 @@ var bb = document.getElementsByClassName("link");
 var dd = document.getElementsByClassName("submenu");
 var _loop_1 = function (i) {
     bb[i].addEventListener("click", function () {
+        if (x == 0) {
+            b.classList.toggle("animate");
+            sideMenu.classList.toggle("animate");
+            logo.classList.toggle("animate");
+            x = 1;
+        }
         for (var j = 0; j < bb.length; j++)
             dd[j].classList.remove("openSubMenu");
         dd[i].classList.toggle("openSubMenu");
@@ -23,4 +39,11 @@ var _loop_1 = function (i) {
 for (var i = 0; i < bb.length; i++) {
     _loop_1(i);
 }
+//Search btn
+var searchContainer = document.getElementsByClassName("thirteen")[0];
+var searchBtn = document.getElementsByClassName("btn-search")[0];
+searchBtn.addEventListener("click", function () {
+    searchContainer.classList.toggle("input");
+    searchContainer.classList.toggle("button");
+});
 //# sourceMappingURL=main.js.map
