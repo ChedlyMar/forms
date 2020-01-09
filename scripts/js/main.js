@@ -48,10 +48,24 @@ setting.addEventListener("click", function () {
     document.getElementsByClassName("settingModel")[0].classList.toggle("showSetting");
 });
 //Search btn
-var searchContainer = document.getElementsByClassName("thirteen")[0];
-var searchBtn = document.getElementsByClassName("btn-search")[0];
-searchBtn.addEventListener("click", function () {
+/*
+var searchContainer=document.getElementsByClassName("thirteen")[0];
+var searchBtn=document.getElementsByClassName("btn-search")[0];
+searchBtn.addEventListener("click",()=>{
     searchContainer.classList.toggle("input");
     searchContainer.classList.toggle("button");
+} )
+*/
+//search block
+var sw = document.getElementsByClassName("search-wrapper")[0];
+var ih = document.getElementsByClassName("input-holder")[0];
+var sin = document.getElementsByClassName("search-input")[0];
+var sic = document.getElementsByClassName("search-icon")[0];
+var cl = document.getElementsByClassName("close")[0];
+sic.addEventListener("click", function () {
+    sw.classList.add("active");
+});
+cl.addEventListener("click", function () {
+    sw.classList.remove("active");
 });
 //# sourceMappingURL=main.js.map

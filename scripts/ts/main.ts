@@ -52,10 +52,24 @@ setting.addEventListener("click",()=>{
 
 
 //Search btn
+/*
 var searchContainer=document.getElementsByClassName("thirteen")[0];
 var searchBtn=document.getElementsByClassName("btn-search")[0];
 searchBtn.addEventListener("click",()=>{
     searchContainer.classList.toggle("input");
     searchContainer.classList.toggle("button");
 } )
+*/
+//search block
+var sw = document.getElementsByClassName("search-wrapper")[0];
+var ih = document.getElementsByClassName("input-holder")[0];
+var sin = document.getElementsByClassName("search-input")[0];
+var sic = document.getElementsByClassName("search-icon")[0];
+var cl = document.getElementsByClassName("close")[0];
+sic.addEventListener("click", ()=>{
+    sw.classList.add("active");
+})
+cl.addEventListener("click", ()=>{
+    sw.classList.remove("active");
+})
 
